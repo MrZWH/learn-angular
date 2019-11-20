@@ -56,3 +56,49 @@
   - 部署
   - 总结
   
+## 框架对比
+
+### Angular8 VS AngularJS
+
+AngularJS：
+
+- 开发语言为 JavaScript
+- 采用不同的指令进行数据和事件绑定
+- 可扩展性差，在复杂应用上维护性差
+
+Angular8 的优点：
+
+- TypeScript 提供类型检查和代码提示
+- 采用`[]`进行数据绑定，`()`事件绑定
+- 优异的可扩展性，可维护性
+  
+### vs React
+
+Angular 是一个完整的框架，而 React 是一个类库，其对应Angular的各种特性，需要寻找各种开源社区类库，如下表所示。
+![vs React](images/vsReact.png)
+Angular使用HTML+CSS+组件类，而 React 中所有都是js
+
+### vs Vue
+
+- vue 很多思想脱胎于angularjs，和react类似是一个轻量级的，面向view层的类库
+- vue适合快速开发较小的工程，而angular自带编程范式，使得它成为与多个开发人员合作的好选择
+- vue 是个人开发维护的开源项目，而angular是Google的开源项目
+
+### angular 架构
+
+![angular架构](images/angular架构.png)
+
+## 环境搭建
+
+Node、npm/cnpm、angular cli。
+
+```shell
+npm install -g @angular/cli
+ng version
+```
+
+## VSCode 配置
+
+推荐插件：angular files、angular language Service、Angular Snippets
+
+chrome插件：augury
