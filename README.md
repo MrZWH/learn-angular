@@ -102,3 +102,57 @@ ng version
 推荐插件：angular files、angular language Service、Angular Snippets
 
 chrome插件：augury
+
+## angular cli
+
+创建项目：
+
+```shell
+ng new <项目名>
+
+# 跳过安装，只创建文件
+ng new <项目名> --skip-install --style css --routing false
+```
+
+启动开发服务器：
+
+```shell
+ng serve
+```
+
+### 项目目录结构
+
+![项目目录结构](images/项目目录结构.png)
+
+### 首页组件结构
+
+- 组件控制屏幕的一部分视图
+- 组件的逻辑是定义在 Class 中的，Class 通过属性和方法与视图交互
+- `@Component` 注解标记一个 Class 为 Angular Component
+- `@Component` 中的 templateUrl 或者 template 将模板和组件联系起来
+- `@Component` 中的 styleUrls 或者 styles 将样式和组件联系起来
+- 模板样式和组件一起决定视图的外观和行为
+
+### 什么是组件
+
+![什么是组件](images/什么是组件.png)
+
+### emmet 快捷用法
+
+<https://docs.emmet.io/cheat-sheet>
+
+### 真机调试
+
+- 确保手机和电脑处于同一 wifi
+- `ng serve --host 0.0.0.0`
+- 手机浏览器打开 `http://<电脑IP>:4200`
+
+消除滚动条：
+
+```css
+::-webkit-scrollbar {
+  display: none;
+}
+```
+
+2-2 3：06
