@@ -1,0 +1,26 @@
+ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+ul li {
+  display: inline-block;
+  margin: 0 5px;
+  white-space: nowrap;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.active {
+  color: rebeccapurple;
+}
+
+.first {
+  color: aqua;
+}
