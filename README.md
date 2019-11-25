@@ -178,4 +178,4 @@ ng serve
 - ng generate component 组件名（驼峰形式）
 - 使用 index.ts 方便导入以及隔离内部变化对外部的影响
 
-2-7
+2-8
