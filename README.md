@@ -183,4 +183,17 @@ ng serve
 - `[class.className]="条件表达式"`
 - `[ngClass]="{'One': true, 'Two': true, 'Three': false}"`
 - `[ngStyle]="{'color': someColor, 'font-size': fontSize}"`
-2-8
+
+## 组件的生命周期
+
+- constructor 构造函数永远首先被调用
+- ngOnChanges 输入属性变化时被调用
+- ngOnInit 组件初始化时被调用
+- ngDoCheck 脏值检测时调用
+  - ngAfterContentInit 当内容投影 ng-content 完成时调用
+  - ngAfterContentChecked Angular 检测投影内容时调用（多次）
+  - ngAfterViewInit 当组件视图（子视图）初始化完成时
+  - ngAfterViewChecked 当检测视图变化时（多次）
+- ngOnDestroy 当组件销毁时
+
+3-2
