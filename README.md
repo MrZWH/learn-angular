@@ -178,4 +178,9 @@ ng serve
 - ng generate component 组件名（驼峰形式）
 - 使用 index.ts 方便导入以及隔离内部变化对外部的影响
 
+### 样式绑定的几种方式
+
+- `[class.className]="条件表达式"`
+- `[ngClass]="{'One': true, 'Two': true, 'Three': false}"`
+- `[ngStyle]="{'color': someColor, 'font-size': fontSize}"`
 2-8
