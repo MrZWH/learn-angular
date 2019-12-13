@@ -40,5 +40,11 @@ export class AppComponent {
       link: ''
     },
   ];
-  handleTabSelected(tabMenu: TopMenu) { }
+  scrollableTabBgColor: string;
+  handleTabSelected(tabMenu: TopMenu) {
+    const colors = ['red', 'blue', 'black'];
+    const idx = Math.floor(Math.random() * 3);
+    this.scrollableTabBgColor = colors[idx];
+    console.log(this.topMenus);
+  }
 }

@@ -1,2 +1,4 @@
-<app-scrollable-tab [backgroundColor]="'red'" [menus]="topMenus" (tabSelected)="handleTabSelected($event)">
+<app-scrollable-tab [backgroundColor]="'red'" [menus]="topMenus" (tabSelected)="handleTabSelected($event)"
+  *ngIf="scrollableTabBgColor==='red'">
+  <div>Hello</div>
 </app-scrollable-tab>
