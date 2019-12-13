@@ -196,4 +196,8 @@ ng serve
   - ngAfterViewChecked 当检测视图变化时（多次）
 - ngOnDestroy 当组件销毁时
 
-3-2
+## 在组件类中引用模版
+
+![在组件类中引用模版](images/在组件类中引用模版.png)
+
+3-3 5:23

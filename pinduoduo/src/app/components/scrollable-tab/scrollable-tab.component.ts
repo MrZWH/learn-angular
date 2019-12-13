@@ -1,3 +1,4 @@
+// tslint:disable-next-line: max-line-length
 import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges, OnChanges, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
 
 export interface TopMenu {
@@ -16,6 +17,7 @@ export interface TopMenu {
  * 但建议实现接口，好处一个是不会由于误删除某个钩子函数
  * 另一个是对组件涉及到哪些生命周期一目了然
  */
+// tslint:disable-next-line: max-line-length
 export class ScrollableTabComponent implements OnInit, OnChanges, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
   selectedIndex = -1;
   @Input() menus: TopMenu[] = [];
