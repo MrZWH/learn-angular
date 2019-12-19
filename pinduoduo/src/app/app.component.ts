@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { TopMenu } from './components';
+import { Component, ViewChild } from '@angular/core';
+import { TopMenu, ImageSlider, ImageSliderComponent } from './components';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,7 @@ import { TopMenu } from './components';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  @ViewChild('imageSlider', { static: true }) imgSlider: ImageSliderComponent;
   topMenus: TopMenu[] = [
     {
       title: '热门',
@@ -40,11 +41,22 @@ export class AppComponent {
       link: ''
     },
   ];
+  imageSliders: ImageSlider[] = [{
+    imgUrl: '',
+    link: '',
+    caption: ''
+  }]
   scrollableTabBgColor: string;
   handleTabSelected(tabMenu: TopMenu) {
     const colors = ['red', 'blue', 'black'];
     const idx = Math.floor(Math.random() * 3);
     this.scrollableTabBgColor = colors[idx];
     console.log(this.topMenus);
+  }
+
+  ngAfterViewInit(): void {
+    // Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+    // Add 'implements AfterViewInit' to the class.
+    console.log(this.imgSlider);
   }
 }

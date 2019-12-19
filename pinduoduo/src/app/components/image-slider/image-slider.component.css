@@ -1,0 +1,39 @@
+.container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.5;
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.container .image-slider {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.nav-section {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.5;
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+
+.nav-section .slide-button {
+  display: flex;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  text-decoration: none;
+  border-radius: 50%;
+  margin: 5px;
+}

@@ -200,4 +200,16 @@ ng serve
 
 ![在组件类中引用模版](images/在组件类中引用模版.png)
 
-3-3 5:23
+## 模板在组件类中的引用
+
+引用多个模板元素：
+可以使用`@ViewChildren`，在 `@ViewChildren`中可以使用引用名或者使用 Angular 组件/指令的类型。声明类型为`QueryList<?>`
+
+## @ViewChild 总结
+
+- @ViewChild 用来在类中引用模板中的视图节点
+- 可以说 Angular 组件，也可以是HTML元素
+- 在 AfterViewInit 中可以安全的使用 @ViewChild 引用的元素
+- 推荐使用 Renderer2 操作 DOM 元素
+
+3-5

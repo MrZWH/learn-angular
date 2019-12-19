@@ -2,12 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ScrollableTabComponent } from './components';
+import { ScrollableTabComponent, ImageSliderComponent } from './components';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ScrollableTabComponent
+    ScrollableTabComponent,
+    ImageSliderComponent
   ],
   imports: [
     BrowserModule
