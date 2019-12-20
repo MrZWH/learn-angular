@@ -219,4 +219,4 @@ ng serve
 `scroll-snap-type: x mandatory;`：在 x 轴强制吸附效果  
 `scroll-snap-align: start;`：吸附的位置在起始位置  
 
-3-5
+3-6
