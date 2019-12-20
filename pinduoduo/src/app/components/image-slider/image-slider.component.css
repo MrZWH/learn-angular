@@ -14,6 +14,16 @@
 .container .image-slider {
   display: flex;
   overflow-x: scroll;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+
+.container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  scroll-snap-align: start;
 }
 
 .nav-section {
@@ -36,4 +46,8 @@
   text-decoration: none;
   border-radius: 50%;
   margin: 5px;
+}
+
+.nav-section .slide-button-select {
+  background-color: red;
 }

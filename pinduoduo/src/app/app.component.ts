@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { TopMenu, ImageSlider, ImageSliderComponent } from './components';
 
 @Component({
@@ -6,7 +6,7 @@ import { TopMenu, ImageSlider, ImageSliderComponent } from './components';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   @ViewChild('imageSlider', { static: true }) imgSlider: ImageSliderComponent;
   topMenus: TopMenu[] = [
     {
@@ -45,7 +45,7 @@ export class AppComponent {
     imgUrl: '',
     link: '',
     caption: ''
-  }]
+  }];
   scrollableTabBgColor: string;
   handleTabSelected(tabMenu: TopMenu) {
     const colors = ['red', 'blue', 'black'];

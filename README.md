@@ -212,4 +212,11 @@ ng serve
 - 在 AfterViewInit 中可以安全的使用 @ViewChild 引用的元素
 - 推荐使用 Renderer2 操作 DOM 元素
 
+## 轮播组件
+
+`scroll-behavior: smooth;`: 轮播图的过渡效果  
+`-webkit-overflow-scrolling: touch;`：触摸可滚动  
+`scroll-snap-type: x mandatory;`：在 x 轴强制吸附效果  
+`scroll-snap-align: start;`：吸附的位置在起始位置  
+
 3-5
