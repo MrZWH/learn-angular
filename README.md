@@ -219,4 +219,24 @@ ng serve
 `scroll-snap-type: x mandatory;`：在 x 轴强制吸附效果  
 `scroll-snap-align: start;`：吸附的位置在起始位置  
 
+## 双向绑定
+
+就是属性绑定+事件绑定
+
+```html
+<input [value]="username" (input)="username = $event.target.value" />
+```
+
+`[value]="username"` -- 绑定 username 值到input的value  
+`(input)="表达式"` -绑定表达式到 input的input事件  
+`username = $event.target.value`- 在input事件触发时执行  
+$event 表达式，提供事件的数据
+
+### ngModel
+
+FormsModule 中提供的指令  
+使用`[(ngModel)]="变量"`形式进行双向绑定  
+其实是一个语法糖  
+`[ngModel]="username" (ngModelChange)="username=$event"`
+
 3-6
