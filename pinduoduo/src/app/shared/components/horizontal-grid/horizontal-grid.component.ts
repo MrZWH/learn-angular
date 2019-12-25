@@ -6,6 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./horizontal-grid.component.css']
 })
 export class HorizontalGridComponent implements OnInit {
+  // tslint:disable-next-line: variable-name
   private _username = '';
   @Output() usernameChange = new EventEmitter();
   constructor() { }

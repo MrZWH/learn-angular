@@ -239,4 +239,44 @@ FormsModule 中提供的指令
 其实是一个语法糖  
 `[ngModel]="username" (ngModelChange)="username=$event"`
 
+## 模块
+
+模块就是提供相对独立功能的一组代码
+
+- 模块的组成部分可以有：组件、服务、指令、管道等
+- 从某种角度说，它像一个小型应用
+
+- @NgModule 注解
+  - Imports 依赖的其它模块
+  - Exports 自己模块暴露的东西，导出的可以是模块也可以是指令
+  - Providers 对自己模块内部要暴露哪些服务，依赖注入
+  - Declarations 我这个模块里面有哪些组件，不能是模块，只能是组件、指令和管道。注意每个组件/指令/管道只能在一个模块中声明
+  - bootstrap：跟模块
+  - BrowserModule：在跟模块需要引入，里面导出了 CommonModule、ApplicationModule
+
+### 模块的“坑”
+
+- 导入其它模块时，需要知道使用该模块的目的
+  - 如果是组件，那么需要在每一个需要该组件的模块都进行导入
+  - 如果是服务，那么一般来说在跟模块中导入一次即可
+- 需要在每个需要的模块中导入的
+  - CommonModule: 提供绑定、*ngIf 和 *ngFor 等基础指令，基本上每个模块都需要导入它
+  - FormsModule/ReactiveFormsModule：表单模块需要在每一个需要的模块导入。
+  - 提供组件、指令或管道的模块
+- 只在跟模块导入一次的
+  - HttpClientModule/BrowserAnimationsModule/NoopAnimationsModule
+  - 只提供服务的模块
+
+### 如何有效的组织模块
+
+![如何有效的组织模块](images/有效组织模块.png)
+
+实际项目中会有一个 Common 模块替代跟模块的作用，包含很多跟模块的功能，而跟模块只做一个引导作用。
+
+### 创建模块
+
+```shell
+ng g m Home --routing
+```
+
 3-6 8:40
