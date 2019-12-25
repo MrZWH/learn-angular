@@ -46,6 +46,7 @@ export class AppComponent implements AfterViewInit {
     link: '',
     caption: ''
   }];
+  username = '';
   scrollableTabBgColor: string;
   handleTabSelected(tabMenu: TopMenu) {
     const colors = ['red', 'blue', 'black'];
