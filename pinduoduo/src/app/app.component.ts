@@ -2,7 +2,8 @@ import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import {
   ImageSliderComponent,
   TopMenu,
-  ImageSlider
+  ImageSlider,
+  Channel
 } from './shared/components';
 
 @Component({
@@ -59,6 +60,14 @@ export class AppComponent implements AfterViewInit {
       imgUrl: '',
       link: '',
       caption: ''
+    }
+  ];
+  channels: Channel[] = [
+    {
+      id: 5,
+      title: '9块9特卖',
+      icon: 'xxxx',
+      link: 'food'
     }
   ];
   // username = '';

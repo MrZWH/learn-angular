@@ -18,17 +18,30 @@ export class HorizontalGridComponent implements OnInit {
   // private _username = '';
   // @Emoji() result = 'hello';
   // @Output() usernameChange = new EventEmitter();
-  channels: Channel[] = [
-    {
-      id: 5,
-      title: '9块9特卖',
-      icon: 'xxxx',
-      link: 'food'
-    }
-  ];
+  @Input() cols = 8;
+  @Input() displayCols = 5;
+  sliderMargin = '0';
   constructor() {}
 
   ngOnInit() {}
+
+  public get scrollable(): boolean {
+    return this.cols > this.displayCols;
+  }
+
+  public get templateRows(): string {
+    return `minmax(auto, max-content)`;
+  }
+
+  public get templateColumns(): string {
+    return `repeat(${this.cols}, calc((100vw - ${this.displayCols *
+      0.4}rem) / ${this.displayCols}))`;
+  }
+
+  handleScroll(ev) {
+    this.sliderMargin = `0 ${(100 * ev.target.scrollLeft) /
+      ev.target.scrollWidth}%`;
+  }
 
   // @Confirmable('您确认要执行吗？')
   // handleClick() {

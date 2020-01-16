@@ -8,4 +8,13 @@
 </app-scrollable-tab>
 <app-image-slider [sliders]="imageSliders" #imageSlider></app-image-slider>
 <!-- <app-horizontal-grid [(username)]="username"></app-horizontal-grid> -->
-<app-horizontal-grid></app-horizontal-grid>
+<app-horizontal-grid>
+  <span appGridItem *ngFor="let item of channels">
+    <img [src]="item.icon" alt="" [appGridItemImage]="'4rem'" />
+    <span appGridItemTitle="'1rem'">{{ item.title }}</span>
+  </span>
+  <!-- <div appGridItem>
+    <div [appGridItemImage]="'2rem'" style="background-color: red;"></div>
+    <span appGridItemTitle="'1rem'"></span>
+  </div> -->
+</app-horizontal-grid>

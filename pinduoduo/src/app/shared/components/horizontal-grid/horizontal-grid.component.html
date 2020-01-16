@@ -11,7 +11,20 @@
 {{ result }} -->
 
 <!-- 指令所在的元素叫宿主 -->
-<div appGridItem *ngFor="let item of channels">
+<!-- <div appGridItem *ngFor="let item of channels">
   <img [src]="item.icon" alt="" [appGridItemImage]="'4rem'" />
   <span appGridItemTitle>{{ item.title }}</span>
+</div> -->
+<div
+  class="container"
+  [ngStyle]="{
+    'grid-template-rows': templateRows,
+    'grid-template-columns': templateColumns
+  }"
+  (scroll)="handleScroll($event)"
+>
+  <ng-content select="span"></ng-content>
+</div>
+<div class="underline" *ngIf="scrollable">
+  <div class="hightlight" [ngStyle]="{ margin: sliderMargin }"></div>
 </div>
