@@ -279,4 +279,25 @@ FormsModule 中提供的指令
 ng g m Home --routing
 ```
 
-4-1
+## 注解
+
+### 什么是装饰器（注解）
+
+装饰器/注解就是一个函数，但它是一个返回函数的函数，它是ts 的一个特性。
+
+自己的装饰器建立在 shared 目录下的 decorators 目录。
+
+## 指令
+
+![指令](./images/指令.png)
+
+### 内建指令
+
+结构型指令：ngIf、ngFor、ngSwitch  
+属性型指令：ngClass、ngStyle、ngModel
+
+自己的指令文件建立在 shared 目录下的 directives 目录。
+
+## 路由
+
+4-1 4:46
