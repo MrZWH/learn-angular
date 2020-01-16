@@ -1,3 +1,7 @@
 /* input {
   border: 1px dashed red;
 } */
+:host {
+  display: flex;
+  justify-content: center;
+}
