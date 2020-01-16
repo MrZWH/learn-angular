@@ -1,5 +1,9 @@
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
-import { ImageSliderComponent, TopMenu, ImageSlider } from './shared/components';
+import {
+  ImageSliderComponent,
+  TopMenu,
+  ImageSlider
+} from './shared/components';
 
 @Component({
   selector: 'app-root',
@@ -12,41 +16,52 @@ export class AppComponent implements AfterViewInit {
     {
       title: '热门',
       link: ''
-    }, {
+    },
+    {
       title: '男装',
       link: ''
-    }, {
+    },
+    {
       title: '百货',
       link: ''
-    }, {
+    },
+    {
       title: '运动',
       link: ''
-    }, {
+    },
+    {
       title: '家纺',
       link: ''
-    }, {
+    },
+    {
       title: '手机',
       link: ''
-    }, {
+    },
+    {
       title: '母婴',
       link: ''
-    }, {
+    },
+    {
       title: '电脑',
       link: ''
-    }, {
+    },
+    {
       title: '水果',
       link: ''
-    }, {
+    },
+    {
       title: '汽车',
       link: ''
-    },
+    }
   ];
-  imageSliders: ImageSlider[] = [{
-    imgUrl: '',
-    link: '',
-    caption: ''
-  }];
-  username = '';
+  imageSliders: ImageSlider[] = [
+    {
+      imgUrl: '',
+      link: '',
+      caption: ''
+    }
+  ];
+  // username = '';
   scrollableTabBgColor: string;
   handleTabSelected(tabMenu: TopMenu) {
     const colors = ['red', 'blue', 'black'];

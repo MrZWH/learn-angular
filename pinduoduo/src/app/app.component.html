@@ -1,6 +1,11 @@
-<app-scrollable-tab [backgroundColor]="'red'" [menus]="topMenus" (tabSelected)="handleTabSelected($event)"
-  *ngIf="scrollableTabBgColor==='red'">
+<app-scrollable-tab
+  [backgroundColor]="'red'"
+  [menus]="topMenus"
+  (tabSelected)="handleTabSelected($event)"
+  *ngIf="scrollableTabBgColor === 'red'"
+>
   <div>Hello</div>
 </app-scrollable-tab>
 <app-image-slider [sliders]="imageSliders" #imageSlider></app-image-slider>
-<app-horizontal-grid [(username)]="username"></app-horizontal-grid>
+<!-- <app-horizontal-grid [(username)]="username"></app-horizontal-grid> -->
+<app-horizontal-grid></app-horizontal-grid>
