@@ -1,9 +1,23 @@
 // tslint:disable-next-line: max-line-length
-import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges, OnChanges, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+  SimpleChanges,
+  OnChanges,
+  AfterContentInit,
+  AfterContentChecked,
+  AfterViewInit,
+  AfterViewChecked,
+  OnDestroy
+} from '@angular/core';
 
 export interface TopMenu {
+  id: number;
   title: string;
-  link?: string;
+  link: string;
 }
 
 @Component({
@@ -18,7 +32,15 @@ export interface TopMenu {
  * 另一个是对组件涉及到哪些生命周期一目了然
  */
 // tslint:disable-next-line: max-line-length
-export class ScrollableTabComponent implements OnInit, OnChanges, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+export class ScrollableTabComponent
+  implements
+    OnInit,
+    OnChanges,
+    AfterContentInit,
+    AfterContentChecked,
+    AfterViewInit,
+    AfterViewChecked,
+    OnDestroy {
   selectedIndex = -1;
   @Input() menus: TopMenu[] = [];
   @Input() backgroundColor = '#fff';
@@ -29,19 +51,17 @@ export class ScrollableTabComponent implements OnInit, OnChanges, AfterContentIn
   /**
    * 构造函数永远第一个被调用
    */
-  constructor() { }
+  constructor() {}
   /**
    * 在组件的 `@Input` 属性发送变化的时候调用
    * @param changes 索引对象，key 是属性的名字，value 是SimpleChanges
    */
-  ngOnChanges(changes: SimpleChanges): void {
-  }
+  ngOnChanges(changes: SimpleChanges): void {}
 
   // ngDoCheck(): void {
   // }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   /**
    * 组件内容初始化

@@ -1,0 +1,9 @@
+<app-scrollable-tab
+  [backgroundColor]="'red'"
+  [menus]="topMenus"
+  [indicatorColor]="'red'"
+  (tabSelected)="handleTabSelected($event)"
+  *ngIf="scrollableTabBgColor === 'red'"
+>
+</app-scrollable-tab>
+<router-outlet></router-outlet>

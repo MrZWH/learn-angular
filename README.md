@@ -347,4 +347,24 @@ ng g m Home --routing
 
 ![路由定义](./images/路由定义.png)
 
-4-8
+跟路由下的组件必须在 `app.module.ts`中 imports 添加。
+
+### 子路由
+
+![子路由](./images/子路由.png)
+
+angular 提供动态路由，定义路径变量path。
+
+### 路径参数
+
+![路径参数](./images/路径参数.png)
+
+### 路径对象参数
+
+![路径对象参数](./images/路径对象参数.png)
+
+### 查询参数
+
+![查询参数](./images/查询参数.png)
+
+4-12
