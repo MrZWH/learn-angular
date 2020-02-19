@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { TopMenu } from 'src/app/shared/components';
 import { Router } from '@angular/router';
+import { HomeService, token } from '../../service';
 
 @Component({
   selector: 'app-home-container',
@@ -8,59 +9,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./home-container.component.css']
 })
 export class HomeContainerComponent implements OnInit {
-  constructor(private router: Router) {}
-  topMenus: TopMenu[] = [
-    {
-      id: 1,
-      title: '热门',
-      link: ''
-    },
-    {
-      id: 1,
-      title: '男装',
-      link: ''
-    },
-    {
-      id: 1,
-      title: '百货',
-      link: ''
-    },
-    {
-      id: 1,
-      title: '运动',
-      link: ''
-    },
-    {
-      id: 1,
-      title: '家纺',
-      link: ''
-    },
-    {
-      id: 1,
-      title: '手机',
-      link: ''
-    },
-    {
-      id: 1,
-      title: '母婴',
-      link: ''
-    },
-    {
-      id: 1,
-      title: '电脑',
-      link: ''
-    },
-    {
-      id: 1,
-      title: '水果',
-      link: ''
-    },
-    {
-      id: 1,
-      title: '汽车',
-      link: ''
-    }
-  ];
+  constructor(
+    private router: Router,
+    private service: HomeService,
+    @Inject(token) private baseUrl: string
+  ) {}
+  topMenus: TopMenu[] = [];
   // username = '';
   scrollableTabBgColor: string;
   handleTabSelected(topMenus: TopMenu) {
@@ -71,5 +25,7 @@ export class HomeContainerComponent implements OnInit {
     this.router.navigate(['home', topMenus.link]);
   }
 
-  ngOnInit() {}
+  ngOnInit(): void {
+    this.topMenus = this.service.getTabs();
+  }
 }

@@ -8,6 +8,7 @@ import {
   HomeGrandComponent,
   HomeAuxComponent
 } from './components';
+import { HomeService, token } from './service';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {
     HomeGrandComponent,
     HomeAuxComponent
   ],
+  providers: [{ provide: token, useValue: 'http://localhost' }],
   imports: [SharedModule, HomeRoutingModule]
 })
 export class HomeModule {}
