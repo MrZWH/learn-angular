@@ -6,7 +6,9 @@ import {
   HomeContainerComponent,
   HomeDetailComponent,
   HomeGrandComponent,
-  HomeAuxComponent
+  HomeAuxComponent,
+  ParentComponent,
+  ChildComponent
 } from './components';
 import { HomeService, token } from './service';
 
@@ -15,7 +17,9 @@ import { HomeService, token } from './service';
     HomeContainerComponent,
     HomeDetailComponent,
     HomeGrandComponent,
-    HomeAuxComponent
+    HomeAuxComponent,
+    ParentComponent,
+    ChildComponent
   ],
   providers: [{ provide: token, useValue: 'http://localhost' }],
   imports: [SharedModule, HomeRoutingModule]

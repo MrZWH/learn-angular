@@ -383,4 +383,35 @@ angular 注入器分级别，应用级、模块级、组件级。
 
 home 模块中新建 service 管理数据。
 
-4-14
+## 脏值检测
+
+什么是脏值检测？  
+当数据改变时更新视图（DOM）
+
+什么时候会触发脏值检测？  
+浏览器事件（如click、mouseover、keyup等）  
+`setTimeout()`和`setInterval()`  
+HTTP 请求
+
+如何进行检测？  
+检查两个状态值：当前状态和新状态
+
+### Angular 绑定原理
+
+![脏值检测生命周期](./images/脏值检测生命周期.png)
+
+在上面的步骤中，进行完第一遍的脏值检测后会立刻进行第二遍脏值检测。
+
+在 AfterViewChecked、AfterViewInit 中不能该有模板中有绑定的属性，不然会无限循环。
+
+### 脏值检测的OnPush 策略
+
+![脏值检测的OnPush 策略](./images/脏值检测的OnPush 策略.png)
+
+只会关注`@Input`注解属性的变化。
+
+绑定不是无代价的
+
+ChangeDetectionStrategy.OnPush 提高木偶组件性能
+
+5-1

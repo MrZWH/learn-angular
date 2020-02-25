@@ -4,7 +4,8 @@ import {
   HomeContainerComponent,
   HomeDetailComponent,
   HomeGrandComponent,
-  HomeAuxComponent
+  HomeAuxComponent,
+  ParentComponent
 } from './components';
 
 const routes: Routes = [
@@ -30,6 +31,11 @@ const routes: Routes = [
         ]
       }
     ]
+  },
+  {
+    path: 'change-detection',
+    pathMatch: 'full',
+    component: ParentComponent
   }
 ];
 
