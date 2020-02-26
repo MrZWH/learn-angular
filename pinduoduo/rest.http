@@ -1,0 +1,11 @@
+@baseUrl=https://jsonplaceholder.typicode.com
+
+GET {{baseUrl}}/posts HTTP/1.1
+
+###
+POST {{baseUrl}}/posts HTTP/1.1
+Content-Type: application/json
+
+{
+
+}
