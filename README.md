@@ -414,4 +414,20 @@ HTTP 请求
 
 ChangeDetectionStrategy.OnPush 提高木偶组件性能
 
+## REST API
+
+讲请求看成一句英文，有动词（POST或GET等），也有名词（/posts 资源路径）
+
+## Angular HttpClient
+
+- 导入 HttpClientModule
+  - 只在跟模块中导入
+  - 整个应用只需要导入一次，不要再其它模块导入
+- 在构造中注入HttpClient
+  - get/post/put/delete 方法对应于 http 方法
+  - 这些方法是泛型的，可以直接把放回的 JSON 转换成对应类型
+  - 不规范的请求，使用request方法
+- 返回值是 Observable
+  - 必须订阅，才会发送请求，否则不会发送
+
 5-3
